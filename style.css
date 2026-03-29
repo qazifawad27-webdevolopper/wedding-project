@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  color: white;
+  text-align: center;
+}
+
+.hero {
+  margin-top: 100px;
+}
+
+.container {
+  padding: 50px;
+}
+
+h1, h2 {
+  margin: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: white;
+  color: #ff4b5c;
+  text-decoration: none;
+  border-radius: 20px;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff4b5c;
+  color: white;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 2s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 2s ease;
+}
+
+.slide-left {
+  animation: slideLeft 2s ease;
+}
+
+.slide-right {
+  animation: slideRight 2s ease;
+}
+
+.zoom-in {
+  animation: zoomIn 2s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideUp {
+  from {transform: translateY(50px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes slideLeft {
+  from {transform: translateX(-50px); opacity: 0;}
+  to {transform: translateX(0); opacity: 1;}
+}
+
+@keyframes slideRight {
+  from {transform: translateX(50px); opacity: 0;}
+  to {transform: translateX(0); opacity: 1;}
+}
+
+@keyframes zoomIn {
+  from {transform: scale(0.5); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+
+/* Floating Hearts */
+.hearts::before {
+  content: "💖 💕 💗 💓 💞";
+  font-size: 30px;
+  animation: float 5s infinite linear;
+}
+
+@keyframes float {
+  0% {transform: translateY(100px);}
+  100% {transform: translateY(-300px);}
+}
+
+.center {
+  display: block;
+  margin: 50px auto;
+}
